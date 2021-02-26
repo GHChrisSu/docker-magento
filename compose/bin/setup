@@ -31,8 +31,7 @@ bin/clinotty bin/magento setup:install \
   --db-name="$MYSQL_DATABASE" \
   --db-user="$MYSQL_USER" \
   --db-password="$MYSQL_PASSWORD" \
-  --base-url=https://"$BASE_URL"/ \
-  --base-url-secure=https://"$BASE_URL"/ \
+  --base-url=http://"$BASE_URL"/ \
   --backend-frontname="$MAGENTO_ADMIN_FRONTNAME" \
   --admin-firstname="$MAGENTO_ADMIN_FIRST_NAME" \
   --admin-lastname="$MAGENTO_ADMIN_LAST_NAME" \
@@ -77,8 +76,5 @@ bin/clinotty bin/magento indexer:reindex
 echo "Clearing the cache to apply updates..."
 bin/clinotty bin/magento cache:flush
 
-echo "Generating SSL certificate..."
-bin/setup-ssl "$BASE_URL"
-
 echo "Docker development environment setup complete."
-echo "You may now access your Magento instance at https://${BASE_URL}/"
+echo "You may now access your Magento instance at http://${BASE_URL}/"
