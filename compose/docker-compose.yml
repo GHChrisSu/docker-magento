@@ -66,8 +66,8 @@ services:
   #  volumes: *appvolumes
 
 volumes:
-  appdata:
-  dbdata:
-  rabbitmqdata:
-  sockdata:
-  ssldata:
+  appdata: ~/sites/appdata
+  dbdata: ~/sites/dbdata
+  rabbitmqdata: ~/sites/rabbitmqdata
+  sockdata: ~/sites/sockdata
+  ssldata: ~/sites/ssldata
